@@ -1,0 +1,352 @@
+html {
+	font-size: 1rem;
+}
+
+body{
+	padding: 0;
+	margin: 0;  
+}
+a {
+	&:link,
+	&:visited,
+	&:active,
+	&:hover {
+		color: $color-white;
+	}
+} 
+
+a {
+	&:link[href^="mailto"],
+	&:active[href^="mailto"],
+	&:visited[href^="mailto"],
+	&:hover[href^="mailto"] {
+		font-size: 0.8824rem;
+		display: inline-block; 
+		color: #0a9976;   
+		font-family: 'Roboto', sans-serif;
+		font-weight: normal;
+	}
+}
+
+//----logo----// 
+
+.logo {
+	text-transform: uppercase;
+	font-size: 	1.7647rem;
+	font-family: 'Neris';
+	font-weight: 600;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+} 
+
+//----header----// 
+
+.header{
+	position: relative;
+	background-image: url('../img/header.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 50.0588rem;
+} 
+
+//----navbar----// 
+
+.navbar {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	.nav-link {
+		font-family: 'Roboto Light';
+		font-weight: normal;
+		font-size: 1rem; 
+		border-bottom: 0.05882rem solid transparent;
+		&:hover {
+			border-bottom: 0.05882rem solid $color-white;
+		}
+	}
+	.nav-button {
+		min-width: 8.4rem;
+		padding: 0.5rem 1rem;
+	}
+	.navbar-collapse {
+		justify-content: flex-end;
+	}
+	.navbar-toggler {
+		background: $color-white;
+	}
+} 
+ 
+//----dropdown-header----// 
+
+.dropdown-header {
+	.dropdown-menu {
+		left: auto;
+		right: 0;
+		min-width: 6rem;
+		a {
+			&:link,
+			&:visited,
+			&:active,
+			&:hover {
+				color: #222;
+			}
+		}
+	}
+	.dropdown-toggle { 
+		&:hover {
+			border: none;
+			text-decoration: none;
+		}
+	}
+	.dropdown-toggle {
+		text-transform: uppercase;
+		&:after {
+			display: none;
+		} 
+	} 
+	.dropdown-toggle::before {
+		@include arrow($color-white, 0.8824rem);
+	}
+} 
+
+//----container-header----// 
+
+.container-header { 
+	.description {
+		position: absolute; 
+		top: 32%;
+		right: 0;
+		left: 0;
+		text-align: center;
+		margin: auto;
+		padding: 2rem; 
+		max-width: 1170px;
+		h1 {
+			color: $color-white;
+			font-size: 2.6471rem;
+			font-family: Neris;
+			font-weight: 600;
+			margin-bottom: 2.9412rem;
+			line-height: 1.4;
+		}
+		p { 
+			color: $color-white;
+			font-family: 'Roboto Light';
+			font-weight: normal;
+			margin: 0 auto 5.1176rem auto;
+			font-size: 	1.4706rem; 
+			width: 70%; 
+			line-height: 1.5;
+		}
+		a { 
+			padding: 0.8824rem 	0.5882rem;
+			min-width: 15.8824rem;
+			@include button-green;
+		}
+	}
+}
+
+//----advantage----// 
+ 
+.advantage {
+	@include green-gradient;
+	padding: 7.1765rem 0; 
+	text-align: center;
+	color: $color-white; 
+	.advantage-img {
+		margin-bottom: 	1.7647rem;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			top: -0.4118rem;
+			right: 3.2353rem;
+			width: 3.5294rem;
+			height: 3.5294rem;
+			background: url('../img/ok.png') 50% 50% no-repeat;
+			background-size: cover;
+		}
+	}
+	span {
+		display: block;
+		font-family: 'Roboto';
+		font-weight: normal;
+	}
+}
+
+//----calculator----// 
+
+.calculator {
+	background: #f0f0f0 url('../img/form-fon.jpg') 50% 50% repeat;
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	font-family: 'Roboto';
+	font-weight: normal;
+	font-size: 	1.0588rem;
+	input {  
+		border-color: transparent;  
+		margin: 0;
+		padding: 0 	1.1765rem;
+		height: 3.5294rem;
+		width: 100%; 
+		background: transparent;
+		font-family: 'Roboto', sans-serif;
+		font-weight: normal;
+		font-size: 	1.0588rem;
+		box-sizing: border-box; 
+		position: relative;	
+	}
+	.calculator-border {
+		position: relative;
+		&::after {
+			position: absolute;
+			top: 0.8824rem;
+			bottom: 0.8824rem;
+			right: 0;
+			content: "";
+			height: auto;
+			width: 0.05882rem;
+			background: #c8c8c8;
+		}
+	}
+	.calculator-form {
+		.calculator-wrap {
+			background: $color-white;
+			border-radius: 2.9412rem;
+		} 
+		.calculator-button {
+			@include button-green;
+		} 
+		.calculator-country { 
+			.btn {
+				border-radius: 2.9412rem 0 0 2.9412rem;
+			}
+		}
+		.calculator-valuta {
+			.btn {
+				border-radius: 0;
+			}
+		}
+	}
+	.dropdown-toggle {
+		// for firefox
+		.filter-option { 
+			height: auto;
+		}	
+	}
+	.dropup .dropdown-toggle,
+	.dropdown-toggle {
+		&:after {
+			display: none;
+		}
+		&:before {
+			@include arrow(#969696, 1.3529rem);
+		}
+	} 
+	.bootstrap-select>.dropdown-toggle {
+		height: 3.5294rem;
+	}
+	.btn-light {
+		&:hover { 
+			background-color: $color-white;
+			border-color: $color-white;
+		}
+	}
+	.btn-light,
+	.btn-light:not(:disabled):not(.disabled).active, 
+	.btn-light:not(:disabled):not(.disabled):active, 
+	.show>.btn-light.dropdown-toggle {
+		background-color: transparent;
+		border-color: transparent;
+	}
+	.flag-icon {
+		border-radius: 5.8824rem;
+		position: relative;
+		display: inline-block;
+		width: 1.7647rem;
+		line-height: 1.7647rem;
+		margin-right: 0.8235rem;
+		&.flag-icon-us {
+			background-image: url('../img/us.svg');
+			background-size: cover;
+		}
+		&.flag-icon-mx {
+			background-image: url('../img/mx.svg');
+			background-size: cover;
+		}
+		&.flag-icon-ru {
+			background-image: url('../img/ru.svg');
+			background-size: cover;
+		}
+	}
+}
+
+
+//----footer----// 
+.footer {
+	background: #1e1e1e;
+	color: #969696;
+	font-size: 12px;
+	font-family: 'Roboto Light';
+	font-weight: normal;
+	padding: 5.8824rem 0 4.7059rem 0;
+	.footer-content {
+		margin-bottom: 4.7059rem;
+	}
+	.footer-mail {
+		margin-bottom: 1.3529rem;
+	}
+	.copyright {
+		padding-top: 3.8235rem;
+	}
+	span {
+		color: $color-white;
+		font-size: 	1.0588rem;
+		font-family: 'Roboto Bold';
+		font-weight: normal;
+		display: block;
+		margin-bottom: 2.0588rem;
+	}
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		a {
+			&:link,
+			&:visited,
+			&:active,
+			&:hover {
+				font-family: 'Roboto';
+				font-weight: normal;
+				font-size: 0.8824rem;
+				color: #969696;
+			}
+		}
+	}
+	ul {
+		margin-bottom: 2.2353rem;
+	}
+	li {
+		margin-bottom: 0.4706rem;
+	}
+	.socium {
+		display: flex;
+		.socium-item {
+			width: 2.3529rem; 
+			svg {
+				fill: $color-white; 
+				width: 	1.1765rem;
+				height: 	1.1765rem;
+				&:hover {
+					fill: #139b66;
+				}
+			}
+		} 
+	}
+}
+
+
