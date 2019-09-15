@@ -112,7 +112,7 @@ gulp.task('image:build', function () {
         .pipe(gulp.dest(path.build.img)); 
 });
 
-/
+
 gulp.task('clean:build', function () {
     return gulp.src(path.clean, { read: false })
         .pipe(rimraf());
