@@ -1,4 +1,7 @@
 $(document).ready(function(){
- // $('.header').height($(window).height());
-     $('.selectpicker').selectpicker();
+  $('.selectpicker').selectpicker();
+  
+  $('.third-button').on('click', function () {
+    $('.animated-icon3').toggleClass('open');
+  }); 
 })
