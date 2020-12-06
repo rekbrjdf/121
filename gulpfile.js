@@ -10,7 +10,7 @@ var path = {
     },
     src: {
         html: 'assets/src/*.html',
-        js: 'assets/src/js/main.js',
+        js: 'assets/src/js/**/*.js',
         style: 'assets/src/style/main.scss',
         img: 'assets/src/img/**/*.*',
         fonts: 'assets/src/fonts/**/*.*'
@@ -40,7 +40,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'), 
     autoprefixer = require('gulp-autoprefixer'), 
     cleanCSS = require('gulp-clean-css'), 
-    uglify = require('gulp-uglify'), 
+    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     cache = require('gulp-cache'), 
     imagemin = require('gulp-imagemin'), 
     jpegrecompress = require('imagemin-jpeg-recompress'), 
@@ -83,8 +84,8 @@ gulp.task('js:build', function () {
         .pipe(rigger())
         .pipe(gulp.dest(path.build.js))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.init())
-        .pipe(uglify()) 
+        .pipe(sourcemaps.init()) 
+        .pipe(terser())
         .pipe(sourcemaps.write('./')) 
         .pipe(gulp.dest(path.build.js)) 
         .pipe(webserver.reload({ stream: true })); 

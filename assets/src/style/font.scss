@@ -1,40 +1,23 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/robotoregular.eot');
-    src: url('../fonts/robotoregular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/robotoregular.woff') format('woff'),
-         url('../fonts/robotoregular.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSansRegular.eot');
+    src: url('../fonts/OpenSansRegular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
+} 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSansBold.eot');
+    src: url('../fonts/OpenSansBold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: bold;
 } 
 
 @font-face {
-    font-family: 'Roboto Bold';
-    src: url('../fonts/robotobold.eot');
-    src: url('../fonts/robotobold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/robotobold.woff') format('woff'),
-         url('../fonts/robotobold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto Light';
-    src: url('../fonts/robotolight.eot');
-    src: url('../fonts/robotolight.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/robotolight.woff') format('woff'),
-         url('../fonts/robotolight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neris';
-    src: local('Neris SemiBold'), local('Neris-SemiBold'), 
-    url('../fonts/nerissemibold.woff2') format('woff2'), 
-    url('../fonts/nerissemibold.woff') format('woff'), 
-    url('../fonts/nerissemibold.ttf') format('truetype');
-    font-weight: 600;
+    font-family: 'Sansita Swashed';
+    src: local('Sansita Swashed'), local('Sansita Swashed'),  
+    url('../fonts/SansitaSwashed.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 

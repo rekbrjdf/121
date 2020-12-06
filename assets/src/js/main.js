@@ -22,4 +22,5 @@
 //= ../../../node_modules/bootstrap-select/js/bootstrap-select.js
 
 // Импортируем другие js-файлы
+//= owl.carousel.min.js
 //= my.js
